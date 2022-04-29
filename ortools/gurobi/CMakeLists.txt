@@ -19,7 +19,5 @@ target_link_libraries(${NAME} PRIVATE
   absl::memory
   absl::strings
   absl::str_format
-  protobuf::libprotobuf
-  ${PROJECT_NAME}::proto
   $<$<BOOL:${USE_COINOR}>:Coin::Cbc>)
 #add_library(${PROJECT_NAME}::gurobi ALIAS ${NAME})

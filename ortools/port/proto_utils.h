@@ -18,7 +18,7 @@
 
 #if !defined(__PORTABLE_PLATFORM__)
 #include "google/protobuf/descriptor.h"
-#include "google/protobuf/text_format.h"
+
 #endif  // !defined(__PORTABLE_PLATFORM__)
 
 #include "absl/base/attributes.h"

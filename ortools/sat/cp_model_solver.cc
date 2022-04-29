@@ -30,7 +30,7 @@
 #include "ortools/base/logging.h"
 #include "ortools/base/timer.h"
 #if !defined(__PORTABLE_PLATFORM__)
-#include "google/protobuf/text_format.h"
+
 #include "ortools/base/file.h"
 #endif  // __PORTABLE_PLATFORM__
 #include "absl/base/thread_annotations.h"

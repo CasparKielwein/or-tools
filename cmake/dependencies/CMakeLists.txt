@@ -74,38 +74,6 @@ if(BUILD_absl)
 endif()
 
 # ##############################################################################
-# Protobuf
-# ##############################################################################
-if(BUILD_Protobuf)
-  message(CHECK_START "Fetching Protobuf")
-  list(APPEND CMAKE_MESSAGE_INDENT "  ")
-  set(protobuf_BUILD_TESTS OFF)
-  set(protobuf_BUILD_EXPORT OFF)
-  set(protobuf_MSVC_STATIC_RUNTIME OFF)
-  # FetchContent_Declare(SOURCE_SUBDIR) was introduced in 3.18
-  if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.18")
-    FetchContent_Declare(
-      protobuf
-      GIT_REPOSITORY "https://github.com/protocolbuffers/protobuf.git"
-      GIT_TAG "v3.19.4"
-      GIT_SUBMODULES ""
-      PATCH_COMMAND git apply --ignore-whitespace "${CMAKE_CURRENT_LIST_DIR}/../../patches/protobuf-v3.19.4.patch"
-      SOURCE_SUBDIR cmake)
-    FetchContent_MakeAvailable(protobuf)
-  else()
-    fetch_git_dependency(
-      NAME Protobuf
-      REPOSITORY "https://github.com/protocolbuffers/protobuf.git"
-      TAG "v3.19.4"
-      PATCH_COMMAND "git apply --ignore-whitespace \"${CMAKE_CURRENT_LIST_DIR}/../../patches/protobuf-v3.19.4.patch\""
-      SOURCE_SUBDIR cmake
-      )
-  endif()
-  list(POP_BACK CMAKE_MESSAGE_INDENT)
-  message(CHECK_PASS "fetched")
-endif()
-
-# ##############################################################################
 # RE2
 # ##############################################################################
 if(BUILD_re2)

@@ -15,6 +15,5 @@ target_include_directories(${NAME} PRIVATE
   ${PROJECT_BINARY_DIR})
 target_link_libraries(${NAME} PRIVATE
   absl::strings
-  protobuf::libprotobuf
-  ${PROJECT_NAME}::proto)
+  )
 #add_library(${PROJECT_NAME}::scheduling ALIAS ${NAME})

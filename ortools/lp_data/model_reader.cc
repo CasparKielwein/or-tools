@@ -15,12 +15,12 @@
 
 #include "ortools/base/file.h"
 #include "ortools/linear_solver/linear_solver.pb.h"
-#include "ortools/lp_data/proto_utils.h"
 #include "ortools/util/file_util.h"
 
 namespace operations_research {
 namespace glop {
 
+/*
 bool LoadMPModelProtoFromModelOrRequest(const std::string& input_file_path,
                                         MPModelProto* model) {
   MPModelProto model_proto;
@@ -52,12 +52,13 @@ bool LoadMPModelProtoFromModelOrRequest(const std::string& input_file_path,
   model->Swap(&model_proto);
   return true;
 }
+*/
 
 bool LoadLinearProgramFromModelOrRequest(const std::string& input_file_path,
                                          LinearProgram* linear_program) {
   MPModelProto model_proto;
   if (LoadMPModelProtoFromModelOrRequest(input_file_path, &model_proto)) {
-    MPModelProtoToLinearProgram(model_proto, linear_program);
+    //MPModelProtoToLinearProgram(model_proto, linear_program);
     return true;
   }
   return false;

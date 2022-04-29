@@ -29,7 +29,6 @@
 #include "ortools/base/case.h"
 #include "ortools/base/map_util.h"
 #include "ortools/linear_solver/linear_solver.pb.h"
-#include "ortools/lp_data/proto_utils.h"
 #include "re2/re2.h"
 
 namespace operations_research {
@@ -447,6 +446,7 @@ bool ParseLp(absl::string_view model, LinearProgram* lp) {
 
 }  // namespace glop
 
+/*
 absl::StatusOr<MPModelProto> ModelProtoFromLpFormat(absl::string_view model) {
   glop::LinearProgram lp;
   if (!ParseLp(model, &lp)) {
@@ -456,5 +456,5 @@ absl::StatusOr<MPModelProto> ModelProtoFromLpFormat(absl::string_view model) {
   LinearProgramToMPModelProto(lp, &model_proto);
   return model_proto;
 }
-
+*/
 }  // namespace operations_research

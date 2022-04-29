@@ -22,7 +22,6 @@ target_link_libraries(${NAME} PRIVATE
   absl::memory
   absl::strings
   absl::str_format
-  protobuf::libprotobuf
   $<$<BOOL:${USE_SCIP}>:libscip>
-  ${PROJECT_NAME}::proto)
+  )
 #add_library(${PROJECT_NAME}::gscip ALIAS ${NAME})

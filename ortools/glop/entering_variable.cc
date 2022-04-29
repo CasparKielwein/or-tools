@@ -17,7 +17,6 @@
 
 #include "ortools/base/timer.h"
 #include "ortools/lp_data/lp_utils.h"
-#include "ortools/port/proto_utils.h"
 
 namespace operations_research {
 namespace glop {

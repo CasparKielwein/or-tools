@@ -21,7 +21,7 @@
 #include "google/protobuf/descriptor.h"
 #include "google/protobuf/duration.pb.h"
 #include "google/protobuf/message.h"
-#include "google/protobuf/text_format.h"
+
 #include "ortools/base/logging.h"
 #include "ortools/base/protoutil.h"
 #include "ortools/constraint_solver/constraint_solver.h"

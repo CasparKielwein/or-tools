@@ -18,7 +18,7 @@
 #include <vector>
 
 #include "absl/memory/memory.h"
-#include "google/protobuf/text_format.h"
+
 #include "ortools/base/cleanup.h"
 #include "ortools/base/commandlineflags.h"
 #include "ortools/base/stl_util.h"

@@ -17,6 +17,5 @@ target_link_libraries(${NAME} PRIVATE
   absl::memory
   absl::strings
   absl::str_format
-  protobuf::libprotobuf
-  ${PROJECT_NAME}::proto)
+  )
 #add_library(${PROJECT_NAME}::glop ALIAS ${NAME})

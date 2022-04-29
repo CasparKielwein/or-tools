@@ -16,6 +16,5 @@ target_include_directories(${NAME} PRIVATE
 target_link_libraries(${NAME} PRIVATE
   absl::flags
   absl::strings
-  protobuf::libprotobuf
-  ${PROJECT_NAME}::proto)
+  )
 #add_library(${PROJECT_NAME}::packing ALIAS ${NAME})

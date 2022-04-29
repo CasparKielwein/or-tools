@@ -16,7 +16,7 @@
 #include <string>
 #include <vector>
 
-#include "google/protobuf/text_format.h"
+
 #include "ortools/base/commandlineflags.h"
 #include "ortools/base/stl_util.h"
 #include "ortools/bop/bop_fs.h"

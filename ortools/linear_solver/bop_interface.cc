@@ -17,7 +17,7 @@
 #include <vector>
 
 #include "absl/base/attributes.h"
-#include "google/protobuf/text_format.h"
+
 #include "ortools/base/commandlineflags.h"
 #include "ortools/base/file.h"
 #include "ortools/base/hash.h"

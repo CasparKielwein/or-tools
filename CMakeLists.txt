@@ -148,10 +148,6 @@ CMAKE_DEPENDENT_OPTION(BUILD_absl "Build the abseil-cpp dependency Library" OFF
   "NOT BUILD_DEPS" ON)
 message(STATUS "Build abseil-cpp: ${BUILD_absl}")
 
-CMAKE_DEPENDENT_OPTION(BUILD_Protobuf "Build the Protobuf dependency Library" OFF
-  "NOT BUILD_DEPS" ON)
-message(STATUS "Build protobuf: ${BUILD_Protobuf}")
-
 if(BUILD_LP_PARSER)
   CMAKE_DEPENDENT_OPTION(BUILD_re2 "Build the re2 dependency Library" OFF
     "NOT BUILD_DEPS" ON)

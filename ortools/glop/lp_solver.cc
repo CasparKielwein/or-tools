@@ -27,7 +27,6 @@
 #include "ortools/glop/status.h"
 #include "ortools/lp_data/lp_types.h"
 #include "ortools/lp_data/lp_utils.h"
-#include "ortools/lp_data/proto_utils.h"
 #include "ortools/util/fp_utils.h"
 
 // TODO(user): abstract this in some way to the port directory.
@@ -59,6 +58,7 @@ namespace operations_research {
 namespace glop {
 namespace {
 
+/*
 // Writes a LinearProgram to a file if FLAGS_lp_dump_to_proto_file is true. The
 // integer num is appended to the base name of the file. When this function is
 // called from LPSolver::Solve(), num is usually the number of times Solve() was
@@ -100,7 +100,7 @@ void DumpLinearProgramIfRequiredByFlags(const LinearProgram& linear_program,
   }
 #endif
 }
-
+*/
 }  // anonymous namespace
 
 // --------------------------------------------------------
@@ -111,7 +111,8 @@ LPSolver::LPSolver() : num_solves_(0) {}
 
 void LPSolver::SetParameters(const GlopParameters& parameters) {
   parameters_ = parameters;
-#ifndef __PORTABLE_PLATFORM__
+  /*
+#if 0 ndef __PORTABLE_PLATFORM__
   if (!absl::GetFlag(FLAGS_glop_params).empty()) {
     GlopParameters flag_params;
     CHECK(google::protobuf::TextFormat::ParseFromString(
@@ -119,6 +120,7 @@ void LPSolver::SetParameters(const GlopParameters& parameters) {
     parameters_.MergeFrom(flag_params);
   }
 #endif
+   */
 }
 
 const GlopParameters& LPSolver::GetParameters() const { return parameters_; }
@@ -141,7 +143,7 @@ ProblemStatus LPSolver::SolveWithTimeLimit(const LinearProgram& lp,
   }
   ++num_solves_;
   num_revised_simplex_iterations_ = 0;
-  DumpLinearProgramIfRequiredByFlags(lp, num_solves_);
+//  DumpLinearProgramIfRequiredByFlags(lp, num_solves_);
 
   // Display a warning if running in non-opt, unless we're inside a unit test.
   DLOG(WARNING)

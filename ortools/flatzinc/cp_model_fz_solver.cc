@@ -24,7 +24,7 @@
 #include "absl/strings/str_cat.h"
 #include "absl/strings/str_format.h"
 #include "absl/synchronization/mutex.h"
-#include "google/protobuf/text_format.h"
+
 #include "ortools/base/iterator_adaptors.h"
 #include "ortools/base/threadpool.h"
 #include "ortools/base/timer.h"

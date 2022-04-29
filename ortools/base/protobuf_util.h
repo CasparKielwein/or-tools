@@ -17,7 +17,7 @@
 #include <string>
 
 #include "google/protobuf/repeated_field.h"
-#include "google/protobuf/text_format.h"
+
 #include "ortools/base/logging.h"
 
 namespace google {
